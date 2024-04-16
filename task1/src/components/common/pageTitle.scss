@@ -1,0 +1,15 @@
+@import "../../style/variables";
+
+.page-title {
+  margin: 1rem 0;
+  color: $text-color;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+
+  h2 {
+    margin: 0;
+  }
+}

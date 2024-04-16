@@ -1,0 +1,72 @@
+@import "../../style/mixins";
+@import "../../style/variables";
+
+.navbar {
+  background-color: $card-background-color;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  min-height: 5rem;
+
+  @include respond(sm-phone) {
+    font-size: 0.8rem;
+  }
+
+  .logo {
+    width: 100%;
+    background: none;
+    border: none;
+    color: $text-color;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    cursor: pointer;
+  }
+
+  ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    gap: 0.5rem;
+
+    @include respond(sm-phone) {
+      padding: 0 1rem 0 0.5rem;
+    }
+
+    li {
+      transition: all 0.5s ease;
+      text-decoration: none;
+
+      a {
+        color: $text-color;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:active,
+        &:hover,
+        &.active {
+          cursor: pointer;
+          color: $card-active-color;
+          font-weight: 700;
+        }
+      }
+
+      &:hover,
+      &:active {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
